@@ -1,0 +1,80 @@
+@import  '../../other/Variable.scss';
+
+.bg-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    position: -webkit-sticky; /* Safari */
+    position: -moz-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin-bottom: 2%;
+    @include breakpoint(mobil){
+        width: 100%;
+        position: relative;
+    }
+    &__burg{
+        display: none;
+        @include breakpoint(mobil){
+            display: flex;
+        }
+        .bugericon  {
+           width: 20px;
+        }
+    }
+    &__logo{
+        img{
+            width: 70%;
+            @include breakpoint(mobil){
+                 width: 40%;
+
+            }
+        }
+    }
+    .visibleburg{
+        height: auto;
+        transition: height 0.8s ease;
+    }
+    &__nav{
+        @include breakpoint(mobil){
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: $nav-bg;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-y: hidden;
+            height: 0;
+            
+            // padding: 20px 0;
+
+        }
+        .active{
+            border: 1px inset $bleu;
+            border-radius: 8px
+        }
+        .link{
+            @include link;
+            @include breakpoint(mobil){
+                color: white;
+                padding: 10px 0;
+                border-bottom: 1px inset white;
+                width: 100%;
+            }
+        }
+        
+    }
+    &__btn-round{
+        .link{
+            @include link;
+            border: 1px solid black;
+            border-radius: 15px;
+            @include breakpoint(mobil){
+                font-size: 0.5em;
+            }
+        }
+    }
+}
