@@ -1,0 +1,55 @@
+@import '../../other/Variable.scss';
+.bg-footer{
+    background-color: rgba(6, 63, 144, 1);
+    padding: 30px 0;
+    &__link-reseau{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 2% 0;
+      .link-reseau{
+        @include link;
+        padding: 0;
+        margin: 5px 10px;
+        img{
+            @include breakpoint(mobil){
+            //   width: 50px;
+            
+            }
+          }
+      }
+    }
+    &__nav{
+        @include breakpoint(mobil){ 
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-direction: column;
+        }
+        .active{
+            border: 1px inset white;
+            border-radius: 8px
+        }
+        .link{
+            @include link;
+            color: white;
+            @include breakpoint(mobil){ 
+                display: flex;
+                padding: 10px 20%;
+                // font-size: 1.5em
+            }
+        }
+    }
+    .copyright{
+        @include link;
+        margin: 1% 0;
+        color: white;
+        @include breakpoint(mobil){ 
+            
+            padding: 10px 20%;
+            // font-size: em;
+        }
+    }
+}

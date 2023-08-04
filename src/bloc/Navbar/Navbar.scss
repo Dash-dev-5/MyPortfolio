@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 5px;
+    background-color: rgba(255, 255, 255, 0.575);
     position: -webkit-sticky; /* Safari */
     position: -moz-sticky;
     position: sticky;
@@ -12,6 +13,7 @@
     z-index: 999;
     margin-bottom: 2%;
     @include breakpoint(mobil){
+        padding: 10px 0;
         width: 100%;
         position: relative;
     }
@@ -21,14 +23,14 @@
             display: flex;
         }
         .bugericon  {
-           width: 20px;
+           width: 23px;
         }
     }
     &__logo{
         img{
             width: 70%;
             @include breakpoint(mobil){
-                 width: 40%;
+                 width: 55%;
 
             }
         }
@@ -48,9 +50,6 @@
             width: 100%;
             overflow-y: hidden;
             height: 0;
-            
-            // padding: 20px 0;
-
         }
         .active{
             border: 1px inset $bleu;
@@ -72,9 +71,6 @@
             @include link;
             border: 1px solid black;
             border-radius: 15px;
-            @include breakpoint(mobil){
-                font-size: 0.5em;
-            }
         }
     }
 }
