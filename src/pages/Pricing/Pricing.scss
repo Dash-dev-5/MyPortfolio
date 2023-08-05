@@ -6,6 +6,10 @@
     width: 75%;
     margin: auto;
     margin-bottom: 10px;
+    @include breakpoint(mobil){
+        width: 90%;
+
+    }
     .title-pricing{
         align-items: center;
         width: 100%;
