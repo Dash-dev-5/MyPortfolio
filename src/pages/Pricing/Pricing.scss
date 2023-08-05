@@ -1,0 +1,53 @@
+@import '../../other/Variable.scss';
+.bg-pricing{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 10px;
+    .title-pricing{
+        align-items: center;
+        width: 100%;
+        @include link;
+        font-weight:bolder;
+    }
+    .pricing{
+        background-color: rgb(1, 23, 49);
+        padding: 0 12px;
+        margin: 10px;
+        position: relative;
+        @include breakpoint(mobil){
+            width: 100%;
+      
+        }
+        .link-pricing{
+            @include link;
+            color: white;
+            padding: 0 4px;
+            text-align: justify;
+            .img{
+                overflow: hidden;
+                width: 100%;
+                img{
+                    width: 100%;
+    
+                }
+                img:hover{
+                    transform: scale(1.6);
+                    transition: transform 0.5s ease;
+                }
+            }
+        }
+        .spanId{
+            @include link;
+            position: absolute;
+            background-color:$orange;
+            right: -10px;
+            bottom: -10px;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+    }
+}

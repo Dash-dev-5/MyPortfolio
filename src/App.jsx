@@ -3,6 +3,7 @@ import Home from './pages/Home/Home'
 import Navbar from './bloc/Navbar/Navbar'
 import Footer from './bloc/Footer/Footer'
 import React from 'react'
+import Pricing from './pages/Pricing/Pricing'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/' Component={Home}/>
           <Route path='*' Component={Home}/>
         </Routes>
+        <Pricing/>
         <Footer/>
       </Router>
     </>
