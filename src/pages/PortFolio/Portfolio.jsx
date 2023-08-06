@@ -1,4 +1,4 @@
-import './Portfolio.scss'
+import './portfolio.scss'
 import React from 'react'
 import { Datapring } from '../Pricing/DataPricing'
 import MyCarousel from '../../bloc/Caroussel/Caroussel'
