@@ -1,4 +1,5 @@
 import './Home.scss'
+import { useState,useEffect } from 'react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import facebook_logo from '../../assets/logos_facebook.svg'
@@ -6,9 +7,32 @@ import instagram_logo from '../../assets/skill-icons_instagram.svg'
 import linkedin_logo from '../../assets/skill-icons_linkedin.svg'
 import twetter_logo from '../../assets/skill-icons_twitter.svg'
 import image_me from '../../assets/IMAGE.svg'
+import call from '../../assets/telephone-cercle.png'
+import msg from '../../assets/commentaires.png'
 import fleche from '../../assets/fleche bleu.svg'
+import CallButton from '../../bloc/WhatsappTools/CallWha'
+import MessageButton from '../../bloc/WhatsappTools/sendMsgeWha'
 function Home() {
 const presentation ="<Jordache Nzita/>"
+const [githubUser,setGithubUser] = useState()
+useEffect(()=>{
+    let gitinfo ;
+    const url = `https://api.github.com/users/dash-dev-5`;
+      fetch(url)
+        .then((res) => {
+          if (res.status === 200) {
+            return res.json();
+          }
+        })
+        .then( (res) => {
+            gitinfo=res
+            console.log(res)
+            setGithubUser(res)    
+        })
+        .catch((e) => {
+            console.error('error fetsh')
+        })
+  },[])
   return <div className='bg-home'>
         <div className="bg-home__content">
             <div className="content__presentation">
@@ -64,7 +88,35 @@ const presentation ="<Jordache Nzita/>"
                 </div>
             </div>
             <div className="content__image">
-                <img src={image_me} className='image_image' alt="" />    
+                <img src={image_me} className='image_image' alt="" /> 
+                  
+                <div className="whatsapp">
+                    <img className='imgAvatar' src={githubUser ?githubUser.avatar_url:''} alt="" />
+                    {/* <h3>Jordache Nzita</h3> */}
+                    <div className="useGithub">
+                    <h3>{githubUser ? githubUser.name : ''}</h3>
+                    <p className='ingit'>in Github</p>
+                    <div className="useGitbub__content">
+                        <div className="repos">
+                            <p>Repos</p>
+                            <p className='fo'>{githubUser ?githubUser.public_repos:""}</p>
+                        </div>
+                        <div className="follow">
+                            <p>Followers</p>
+                            <p className='fo'>{githubUser ?githubUser.followers:""}</p>
+                        </div>
+                    </div>
+                </div> 
+                    <div className="whatsapp__button">
+                        <CallButton   phoneNumber={'+243892669552Ca'}>
+                            <img src={call} alt="" />
+                            </CallButton>
+                        <MessageButton phoneNumber={'+243892669552'}>
+                            <img src={msg} alt="" />
+                            </MessageButton>
+
+                    </div>
+                </div>
             </div>
         </div>
 

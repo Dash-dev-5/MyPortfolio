@@ -172,7 +172,13 @@
           }
         }
     }
+    .content__image:hover .whatsapp{
+      transform: scale(1);
+      display: block;
+      // transition: transfom 0.5s ease;
+    }
     .content__image{
+      position: relative;
       .image_image{
           @include breakpoint(mobil){
             max-width: 90%;
@@ -180,6 +186,96 @@
           @include breakpoint(tablette){
             width: 360px;
           }
+      }
+      @keyframes appear {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        
+      }
+      
+      .whatsapp{
+        @include link;
+        position: absolute;
+        bottom: 3%;
+        left: 6%;
+        border-radius: 20px;
+        padding: 20px 8px;
+        background-color: white;
+        // box-shadow: 1px 1px 1.6px #d1d9e6, -0.6px -0.6px 1.6px #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.178); /* Réglez les valeurs d'ombre appropriées ici */
+        @include breakpoint(mobil){
+          transform: scale(0);
+          transition: transform 0.3s ease;
+        }
+        .ingit{
+          text-align: end;
+          width: 100%;
+        }
+        h3{
+          font-family: $font;
+          // font-weight: bold;
+        }
+        .useGithub{
+          
+          // @include link;
+          font-family: $font2;
+          font-size: 0.8em;
+          // position: absolute;
+          background-color: white;
+          // top: 40%;
+          // right: 0;
+          padding: 5px 15px;
+          border-radius: 30px;
+          // border: 1px solid $orange;
+          .useGitbub__content{
+            display: flex;
+            justify-content: space-between;
+            .repos{
+              padding-right:10px ;
+            }
+            .fo{
+              font-family: $font;
+              // background-color: aqua;
+              font-weight: bolder;
+            }
+          }
+        }
+        .imgAvatar{
+          width: 50px;
+          border-radius: 50%;
+        }
+        &__button{
+          display: flex;
+          justify-content: space-around;
+          margin: 12px 0;
+          position: absolute;
+          top: -15%;
+          right: 0;
+          .callImage{
+            margin-right: 10%;
+          }
+          button{
+            border: none;
+            background-color: white;
+            border-radius: 12px;
+            padding: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.178); /* Réglez les valeurs d'ombre appropriées ici */
+            cursor: pointer;
+            img{
+              width: 25px;
+              // box-shadow: 1rem 1rem 1.6rem #d1d9e6, -0.6rem -0.6rem 1.6rem #fff;
+              background-color: transparent;
+              
+            }
+          }
+        }
+  
       }
     }
   }

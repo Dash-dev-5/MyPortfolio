@@ -5,12 +5,18 @@ import hum from '../../assets/hamb.svg'
 import close from '../../assets/closes.svg'
 import './Navbar.scss'
 import logo from '../../assets/logo dash.svg';
+// import u
+import { useLocation } from 'react-router-dom';
 function Navbar() {
+  const history = useLocation();
   const [hamburger,setHamburger] = useState(true)
   const toggelHamburger = ()=>{setHamburger(!hamburger)}
   useEffect(()=>{
 
   },[hamburger])
+  useEffect(() => {
+    setHamburger(true);
+  }, [history.pathname]);
   return <div className='bg-navbar'>
     <div className="bg-navbar__burg">
       {hamburger ? <img src={hum} onClick={toggelHamburger} className='bugericon'  alt="" /> : <img src={close}  className='bugericon'  onClick={toggelHamburger} alt="" /> }

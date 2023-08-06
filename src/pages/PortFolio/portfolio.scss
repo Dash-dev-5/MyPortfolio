@@ -1,0 +1,27 @@
+@import '../../other/Variable.scss';
+.bg-portfolio{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    .styleCaroucel{
+        width : 75%;
+        border : 1px solid black;
+        box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+        margin-Bottom :40px;
+        @include breakpoint(mobil){
+            width: 80%;
+        }
+        .styleImage{
+            height : 400px;
+            width : 100%;
+            margin : 'auto';
+            // height : 'max-content'
+            @include breakpoint(mobil){
+                height: 200px;
+                // margin-bottom: 100px;
+            }
+
+        }
+    }
+}

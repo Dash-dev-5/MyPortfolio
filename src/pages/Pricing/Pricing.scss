@@ -8,7 +8,10 @@
     margin-bottom: 10px;
     @include breakpoint(mobil){
         width: 90%;
-
+        height:400px;
+        overflow-y: scroll;
+        
+        
     }
     .title-pricing{
         align-items: center;
@@ -21,6 +24,7 @@
         padding: 0 12px;
         margin: 10px;
         position: relative;
+        width: 200px;
         @include breakpoint(mobil){
             width: 100%;
       
