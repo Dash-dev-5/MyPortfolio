@@ -29,7 +29,7 @@ function Navbar() {
         <NavLink to='/Contact' className='link'>Contact us</NavLink>
     </div>
     <div className="bg-navbar__btn-round">
-       <NavLink className='link' exact to="/">Contact us</NavLink>
+       <NavLink className='link' to="/Contact">Contact us</NavLink>
     </div>
 
   </div>
