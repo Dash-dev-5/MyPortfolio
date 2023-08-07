@@ -267,5 +267,9 @@
       }
     }
   }
-
+  &__content:hover .whatsapp{
+    transform: scale(1);
+    display: block;
+    // transition: transfom 0.5s ease;
+  }
 }
