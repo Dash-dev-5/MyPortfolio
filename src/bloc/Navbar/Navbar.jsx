@@ -11,9 +11,7 @@ function Navbar() {
   const history = useLocation();
   const [hamburger,setHamburger] = useState(true)
   const toggelHamburger = ()=>{setHamburger(!hamburger)}
-  useEffect(()=>{
-
-  },[hamburger])
+  
   useEffect(() => {
     setHamburger(true);
   }, [history.pathname]);
@@ -28,7 +26,7 @@ function Navbar() {
         <NavLink to='/' className='link'>Home</NavLink>
         <NavLink to='/About' className='link'>About</NavLink>
         <NavLink to='/Portfolio' className='link'>Portfolio</NavLink>
-        <NavLink to='/Pricing' className='link'>Pricing</NavLink>
+        <NavLink to='/Contact' className='link'>Contact us</NavLink>
     </div>
     <div className="bg-navbar__btn-round">
        <NavLink className='link' exact to="/">Contact us</NavLink>

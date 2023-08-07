@@ -28,7 +28,7 @@ function Footer() {
                     <NavLink to='/' className='link'>Home</NavLink>
                     <NavLink to='/About' className='link'>About</NavLink>
                     <NavLink to='/Portfolio' className='link'>Portfolio</NavLink>
-                    <NavLink to='/Pricing' className='link'>Pricing</NavLink>
+                    <NavLink to='/Contact' className='link'>Contact us</NavLink>
                 </div>
                 <div className="copyright">
                     <p>@2023 Jordache Nzita | All Rights Reserved</p>

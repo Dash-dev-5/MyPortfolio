@@ -21,10 +21,11 @@ function Portfolio() {
     const [statecomment,setStatecomment] = useState(false)
     const handelVisibleCommentaire = ()=>{
         setStatecomment(!statecomment);
+     
     }
   return (
     <div className="bg-portfolio">
-        <MyCarousel carouselData={carouselData}  idCurrent={handleCommentChange}/>
+        <MyCarousel carouselData={carouselData}  idCurrent={handleCommentChange} stateAutchange={!statecomment} />
         <div className="title">
             <h2>{currentComment.name}</h2>
             <h3>Technologies :{currentComment.technologie}</h3>

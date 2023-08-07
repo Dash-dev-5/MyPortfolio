@@ -6,6 +6,8 @@ import React from 'react'
 import Pricing from './pages/Pricing/Pricing'
 import Portfolio from './pages/PortFolio/Portfolio'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
+import About from './pages/About/About'
+import Contact from './pages/Contact/Contact'
 function App() {
 
 
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route exact path='/' Component={Home}/>
           <Route path='/Portfolio' Component={Portfolio}/>
+          <Route path='/About' Component={About}/>
+          <Route path='/Contact' Component={Contact}/>
         </Routes>
         {/* <Pricing/> */}
         <Footer/>

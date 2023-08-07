@@ -1,0 +1,153 @@
+@import '../../other/Variable.scss';
+.bg-contact{
+    position: relative;
+    height: 500px;
+    .backSup{
+        @include link;
+        font-family: $font;
+        height: 120px;
+        background-color: $orange
+    }
+    .submitContact{
+        // color: black;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.178); /* Réglez les valeurs d'ombre appropriées ici */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        align-items: center;
+        position: absolute;
+        top: 15%;
+        left: 20%;
+        .formCorrespondant {
+            h3,p{
+                @include link;
+                color: black;
+                font-family: $font;
+                text-align: start;
+
+            }
+            
+            .controw{
+                display: flex;color: black;
+                .form-group{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: start;
+                    @include link
+                }
+            }
+            input{
+                // margin: 0px 0 10px 0 ;
+                padding: 5px 0 5px 15px;
+                background-color: transparent;
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 4px;
+                margin-bottom: 10px;
+                outline: none;
+            }
+            textarea{
+                width: 90%;
+                border-radius: 8px;
+                @include link
+            }
+            button{
+                @include link;
+                width: 40%;
+                margin: auto;
+                background-color: $orange;
+                border: none;
+                border-radius: 8px;
+                margin-top:10px ;
+                color: white;
+            }
+        } 
+            
+        .formCorrespondant{
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+    }
+    .whatsapp{
+        @include link;
+        position: absolute;
+        top: 40%;
+        right: 20%;
+        border-radius: 20px;
+        padding: 20px 8px;
+        // width: 20%;
+        // height: 00px;
+        background-color: white;
+        // box-shadow: 1px 1px 1.6px #d1d9e6, -0.6px -0.6px 1.6px #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.178); /* Réglez les valeurs d'ombre appropriées ici */
+        @include breakpoint(mobil){
+          transform: scale(0);
+          transition: transform 0.3s ease;
+        }
+        .ingit{
+          text-align: end;
+          width: 100%;
+        }
+        h3{
+          font-family: $font;
+          // font-weight: bold;
+        }
+        .useGithub{
+          
+          // @include link;
+          font-family: $font2;
+          font-size: 0.8em;
+          // position: absolute;
+          background-color: white;
+          // top: 40%;
+          // right: 0;
+          padding: 5px 15px;
+          border-radius: 30px;
+          // border: 1px solid $orange;
+          .useGitbub__content{
+            display: flex;
+            justify-content: space-between;
+            .repos{
+              padding-right:10px ;
+            }
+            .fo{
+              font-family: $font;
+              // background-color: aqua;
+              font-weight: bolder;
+            }
+          }
+        }
+        .imgAvatar{
+          width: 50px;
+          border-radius: 50%;
+        }
+        &__button{
+          display: flex;
+          justify-content: space-around;
+          margin: 12px 0;
+          position: absolute;
+          top: -15%;
+          right: 0;
+          .callImage{
+            margin-right: 10%;
+          }
+          button{
+            border: none;
+            background-color: white;
+            border-radius: 12px;
+            padding: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.178); /* Réglez les valeurs d'ombre appropriées ici */
+            cursor: pointer;
+            img{
+              width: 25px;
+              // box-shadow: 1rem 1rem 1.6rem #d1d9e6, -0.6rem -0.6rem 1.6rem #fff;
+              background-color: transparent;
+              
+            }
+          }
+        }
+    
+      }
+}
