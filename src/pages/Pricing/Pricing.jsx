@@ -6,7 +6,7 @@ function Pricing() {
 
   return (
     <div className="bg-pricing">
-        <h2 className='title-pricing'>My Pricing</h2>
+        <h2 className='title-pricing'>My Last Project</h2>
         {Datapring.map(data =>
             <div key={data.id} className="pricing">
                 <NavLink to={data.link} target='_blank' className='link-pricing'>

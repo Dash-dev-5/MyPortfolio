@@ -17,7 +17,7 @@ function App() {
           <Route exact path='/' Component={Home}/>
           <Route path='/Portfolio' Component={Portfolio}/>
         </Routes>
-        <Pricing/>
+        {/* <Pricing/> */}
         <Footer/>
       </Router>
     </>

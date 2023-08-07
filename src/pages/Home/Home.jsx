@@ -12,6 +12,7 @@ import msg from '../../assets/commentaires.png'
 import fleche from '../../assets/fleche bleu.svg'
 import CallButton from '../../bloc/WhatsappTools/CallWha'
 import MessageButton from '../../bloc/WhatsappTools/sendMsgeWha'
+import Pricing from '../Pricing/Pricing'
 function Home() {
 const presentation ="<Jordache Nzita/>"
 const [githubUser,setGithubUser] = useState()
@@ -119,7 +120,7 @@ useEffect(()=>{
                 </div>
             </div>
         </div>
-
+        <Pricing/>
         </div>
 }
 

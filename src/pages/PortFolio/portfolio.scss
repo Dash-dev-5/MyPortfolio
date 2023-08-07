@@ -1,27 +1,75 @@
 @import '../../other/Variable.scss';
 .bg-portfolio{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
     margin: auto;
     width: 100%;
     .styleCaroucel{
+
         width : 75%;
-        border : 1px solid black;
-        box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+        // border : 1px solid black;
+        // box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.178); /* Réglez les valeurs d'ombre appropriées ici */
         margin-Bottom :40px;
         @include breakpoint(mobil){
-            width: 80%;
+            width:90%;
         }
         .styleImage{
-            height : 400px;
+            height : 500px;
+            overflow:scroll;
             width : 100%;
-            margin : 'auto';
-            // height : 'max-content'
+            margin : auto;
+            // height : max-content;
             @include breakpoint(mobil){
                 height: 200px;
                 // margin-bottom: 100px;
             }
 
         }
+    }
+    .title{
+        width: 80%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        font-family: $font;
+        a{
+            @include link;
+            // padding-left: 0;
+            background-color: $bleu;
+            color: white;
+            border-radius: 10px;
+            margin: 6px 0;
+        }
+    }
+    p{
+        @include link;
+        width:80%;
+        text-align: justify;
+        height: 56px;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+    .visibleComment{
+        overflow: visible;
+        height: max-content;
+        
+    }
+    .read_div{
+        display: flex;
+        justify-content: start;
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .read-more{
+            @include link;
+            background-color: $orange;
+            border: none;
+            color: white;
+            border-radius: 8px;
+        }
+
     }
 }

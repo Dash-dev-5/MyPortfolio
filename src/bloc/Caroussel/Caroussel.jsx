@@ -7,7 +7,7 @@ import { useActionData } from 'react-router-dom';
 
 const MyCarousel = ({carouselData,styleImage,styleCaroucel,idCurrent}) => {
     const sliderRef = useRef(null)
-    const [idCurrents,setIdCurrents] = useState()
+    const [currentIndex, setCurrentIndex] = useState(0);
     const settings = {
       dots: true,
       infinite: true,
@@ -17,17 +17,15 @@ const MyCarousel = ({carouselData,styleImage,styleCaroucel,idCurrent}) => {
       autoplay: true,
       autoplaySpeed: 5000,
       accessibility:true,
-      
+      beforeChange: (current, next) => setCurrentIndex(next), // Set the current index before the slide changes
     };
-
-  const afterSlideChange = (currentSlideIndex) => {
-        const slides = sliderRef.current.props.children;
-        const currentImageID = slides[currentSlideIndex].key;
-        console.log('ID de l\'image courante : ', currentImageID);
-      setIdCurrents(imageID);
-  };
-    
-    useEffect(()=>idCurrent=idCurrents,[idCurrents])
+  
+    useEffect(() => {
+      // Update the idCurrent whenever the currentIndex changes
+      if (carouselData.length > 0) {
+        idCurrent(carouselData[currentIndex]);
+      }
+    }, [carouselData, currentIndex, idCurrent]);
     return (
         <section style={styleCaroucel} className='styleCaroucel'>
             <Slider {...settings}  ref={sliderRef}>
