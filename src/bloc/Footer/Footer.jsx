@@ -10,16 +10,16 @@ function Footer() {
   return (
         <div className="bg-footer">
             <div className="bg-footer__link-reseau">
-                        <NavLink to='' className='link-reseau'>
+                        <NavLink to="https://www.facebook.com/Dachenzita?mibextid=LQQJ4d" className='link-reseau'>
                             <img src={facebook_logo} alt="" />
                         </NavLink>
-                        <NavLink to='' className='link-reseau'>
+                        <NavLink to='https://www.linkedin.com/in/dash-nzita-157470263' className='link-reseau'>
                             <img src={linkedin_logo} alt="" />
                         </NavLink>
                         <NavLink to='' className='link-reseau'>
                             <img src={twetter_logo} alt="" />
                         </NavLink>
-                        <NavLink to='' className='link-reseau'>
+                        <NavLink to='https://www.instagram.com/p/CiqQ3MtMbAt/?igshid=YmMyMTA2M2Y=' className='link-reseau'>
                             <img src={instagram_logo} alt="" />
                         </NavLink>
                         

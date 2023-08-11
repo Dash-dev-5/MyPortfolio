@@ -47,7 +47,7 @@ useEffect(()=>{
                         <p>Je suis un developpeur Junior Front-end et Ingenieur en technique de maintenance. je suis passionné de le nouvelle technologie et de la numerique en generale</p>
                     </div>
                     <div className="legende__hire-me">
-                        <NavLink to='' className='link'>Engager Moi</NavLink>
+                        <NavLink to='/Contact' className='link'>Engager Moi</NavLink>
                         <img src={fleche} alt="" />
                     </div>
                 </div>
@@ -73,16 +73,16 @@ useEffect(()=>{
                     </div>
                 </div>
                 <div className="presentation__link-reseau">
-                        <NavLink to='' className='link-reseau'>
+                        <NavLink to="https://www.facebook.com/Dachenzita?mibextid=LQQJ4d" className='link-reseau'>
                             <img src={facebook_logo} alt="" />
                         </NavLink>
-                        <NavLink to='' className='link-reseau'>
+                        <NavLink to='https://www.linkedin.com/in/dash-nzita-157470263' className='link-reseau'>
                             <img src={linkedin_logo} alt="" />
                         </NavLink>
                         <NavLink to='' className='link-reseau'>
                             <img src={twetter_logo} alt="" />
                         </NavLink>
-                        <NavLink to='' className='link-reseau'>
+                        <NavLink to='https://www.instagram.com/p/CiqQ3MtMbAt/?igshid=YmMyMTA2M2Y=' className='link-reseau'>
                             <img src={instagram_logo} alt="" />
                         </NavLink>
                         
@@ -109,7 +109,7 @@ useEffect(()=>{
                     </div>
                 </div> 
                     <div className="whatsapp__button">
-                        <CallButton   phoneNumber={'+243892669552Ca'}>
+                        <CallButton   phoneNumber={'+243892669552'}>
                             <img src={call} alt="" />
                             </CallButton>
                         <MessageButton phoneNumber={'+243892669552'}>

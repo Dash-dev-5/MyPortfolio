@@ -51,8 +51,8 @@ function Contact() {
                             <input type="email" name="emailCorrespondant" id="emailCorrespondant" placeholder="e.g nzita@yahoo.com" required/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="numnerCorespondant">Email</label>
-                            <input type="number" name="numnerCorrespondant" id="numnerCorrespondant" placeholder="e.g +24389995436543" required/>
+                            <label htmlFor="numnerCorespondant">Numero</label>
+                            <input type="number" name="numnerCorrespondant" id="numnerCorrespondant" placeholder="e.g +243896654456" required/>
                         </div>
                     </div>
                     <div className="form-group">
@@ -82,7 +82,7 @@ function Contact() {
                         </div>
                     </div> 
                         <div className="whatsapp__button">
-                            <CallButton   phoneNumber={'+243892669552Ca'}>
+                            <CallButton   phoneNumber={'+243892669552'}>
                                 <img src={call} alt="" />
                                 </CallButton>
                             <MessageButton phoneNumber={'+243892669552'}>
